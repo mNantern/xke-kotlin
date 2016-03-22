@@ -12,6 +12,7 @@ class DataController {
     @RequestMapping("/data")
     @ResponseStatus(value = HttpStatus.CREATED)
     fun create(@RequestBody dataList: List<Data>) {
+        println("${dataList.size} elements in POST /data:")
         dataList.forEach { println(it.toString()) }
     }
 }
