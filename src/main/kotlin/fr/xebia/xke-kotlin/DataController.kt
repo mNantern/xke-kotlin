@@ -11,7 +11,7 @@ class DataController {
 
     @RequestMapping("/data")
     @ResponseStatus(value = HttpStatus.CREATED)
-    fun create(@RequestBody dataList: List<Data>){
+    fun create(@RequestBody dataList: List<Data>) {
         dataList.forEach { println(it.toString()) }
     }
 }
